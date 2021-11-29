@@ -6,40 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>JS Quiz</title>
 </head>
 <body>
     <!--header will contain view score and timer-->
-    <header>
+    <header class="container-fluid mb-5">
+        <div class="row">
         <!--high score button-->
-        <div>
-            <button>High Scores</button>
-        </div>
-    <!--timer-->
-        <div>
-            <p>Time:75s</p>
+            <div class="col-6">
+                <button id= "show-scores" type="button" class="btn btn-secondary d-inline-block mt-1">High Scores</button>
+            </div>
+        <!--timer-->
+            <div class="col-6">
+                <p class="d-flex justify-content-end time">Time:75s</p>
+            </div>            
         </div>
     </header>
-    <!--Main Content-->
+    <!--Main Container-->
     <main>
-        <div>
-            <section>
-                <div>
+        <div class="container">
+            <section id="intro">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="d-flex justify-content-center text-center">Welcome to UncleBikki's Code Quiz</h1>
+                        <p class="d-flex justify-content-center text-center">Try to answer the following questions within the time limit. Incorrect answers will reduce your time remaining time by 10 seconds</p>
+                        <button id="start" type="button" class="btn btn-success mx-auto d-block">Start Quiz</button>
+                    </div>
+                </div>
+            </section>
+            <!--Questions and Answers-->
+            <section id="Questions">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id ="Question" class="text-center">Question</h2>
+                        <ul class="p-0">
+                        <!--add questions with js as li elements--> 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--Finished Quiz-->
+            <section id="finished">
+                <div class="row">
+                    <div class="col-12 justify-content-center text-center">
+                        <h2 >Time is Up!</h2>
+                        <p>Your Final score is:<!--insert element with js--></p>
+                        <p>Enter Your Intials:<!-- insert element with js--></p>
+                        <button id="submit" class="btn btn-primary m-1 d-inline-block">Submit Quiz</button>
+                    </div>
+                </div>
 
+            </section>
+            <!--High Score Display-->
+            <section id="highscore">
+                <div class="row">
+                    <div class="col-12 justify-content-center text-center">
+                        <h2>High Scores</h2>
+                        <ol id="scores">
+                            <!--add high scores element as a li element-->
+                        </ol>
+                        <button id="back" class="btn btn-secondary d-inline-block m-1">Go Back</button>
+                        <button id="clear" class="btn btn-danger d-inline-block m-1">Clear Scores</button>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
+    <!--footer-->
     <footer>
-        <div>An UncleBikki Creation</div>
+        <div class="fixed-bottom text-center text-muted">An UncleBikki Creation</div>
     </footer>
 </body>
 
 <!--scripts-->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="./assets/script.js"></script>   
 </html>
 
