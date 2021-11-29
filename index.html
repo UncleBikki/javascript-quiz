@@ -14,12 +14,12 @@
     <header class="container-fluid mb-5">
         <div class="row">
         <!--high score button-->
-            <div class="col-6">
-                <button id= "show-scores" type="button" class="btn btn-secondary d-inline-block mt-1">High Scores</button>
+            <div class="col-6" id="scores">
+                <a href="./highscore.html">View high scores</a>
             </div>
         <!--timer-->
             <div class="col-6">
-                <p class="d-flex justify-content-end time">Time:75s</p>
+                <p id ="timer" class="d-flex justify-content-end time">Time:</p>
             </div>            
         </div>
     </header>
@@ -41,7 +41,10 @@
                     <div class="col-12">
                         <h2 id ="Question" class="text-center">Question</h2>
                         <ul class="p-0">
-                        <!--add questions with js as li elements--> 
+                            <div class="option choice1 btn"  id="a"></div>
+                            <div class="option choice2 btn" id="b"></div>
+                            <div class="option choice3 btn"  id="c"></div>
+                            <div class="option choice4 btn" id="d"></div>
                         </ul>
                     </div>
                 </div>
